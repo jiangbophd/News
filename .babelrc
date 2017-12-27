@@ -1,0 +1,31 @@
+{
+  "presets": ["react"],
+  "env": {
+    "web": {
+      "presets": ["react-hmre"],
+      "plugins": [
+        "transform-es2015-classes",
+        "transform-object-rest-spread"
+      ]
+    },
+    "dev": {
+      "plugins": [
+        "transform-es2015-classes",
+        "transform-object-rest-spread"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 1 versions"]
+          },
+          "modules": false
+        }]
+      ],
+      "plugins": [
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}

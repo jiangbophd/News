@@ -1,0 +1,25 @@
+.listItemStyle {
+    padding-top:2px;
+    padding-bottom: 2px;
+}
+
+.listItemImg {
+    height: 60px;
+    width: 100px;
+}
+.listItemTitle {
+    width: 100%;
+    font-size: 15px;
+}
+.listItemSubtitle {
+    width: 100%;
+    font-size: 10px;
+}
+
+.listItemStatus {
+    color:red;
+}
+
+.listItemTime {
+    float:right;
+}

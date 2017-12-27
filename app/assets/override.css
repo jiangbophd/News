@@ -1,0 +1,15 @@
+:checked+.tabbar__button {
+    color: red;
+}
+.back-button__icon{
+    fill: white;
+}
+
+.list-item--material__left {
+    min-width: 100px;
+    margin-right: 10px;
+}
+
+.page__content--suppress-layer-creation {
+    -webkit-overflow-scrolling: touch;
+}

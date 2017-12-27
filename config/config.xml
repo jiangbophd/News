@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.richard.test"  version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>News</name>
+    <description>
+        News App
+    </description>
+    <author href="http://www.test.be/">
+        News
+    </author>
+    <content src="index.html" />
+    <allow-navigation href="*" />
+    <allow-navigation href="http://*/*" />
+    <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="http:*" />
+    <access launch-external="yes" origin="https:*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="15" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="APPCENTER_ANALYTICS_ENABLE_IN_JS" value="true" />
+    <preference name="APPCENTER_CRASHES_ALWAYS_SEND" value="false" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="CodePushDeploymentKey" value="1puVtFkzN8WqRwPBFKrPTtEhlOyFBkm5EqRGM" />
+    </platform>
+    <platform name="ios">
+        <preference name="CodePushDeploymentKey" value="1puVtFkzN8WqRwPBFKrPTtEhlOyFBkm5EqRGM" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <splash src="assets/ios/splash/Default@2x~iphone~anyany.png" />
+        <splash src="assets/ios/splash/Default@2x~iphone~comany.png" />
+        <splash src="assets/ios/splash/Default@2x~iphone~comcom.png" />
+        <splash src="assets/ios/splash/Default@3x~iphone~anyany.png" />
+        <splash src="assets/ios/splash/Default@3x~iphone~anycom.png" />
+        <splash src="assets/ios/splash/Default@3x~iphone~comany.png" />
+        <splash src="assets/ios/splash/Default@2x~ipad~anyany.png" />
+        <splash src="assets/ios/splash/Default@2x~ipad~comany.png" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~4.0.3" />
+    <plugin name="cordova-plugin-disable-ios11-statusbar" spec="^1.0.0" />
+    <plugin name="cordova-plugin-file" spec="~4.3.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="~1.6.0" />
+    <plugin name="cordova-plugin-code-push"></plugin>
+
+
+</widget>

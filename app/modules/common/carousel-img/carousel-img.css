@@ -1,0 +1,17 @@
+.carouselHeight{
+    height: 200px;
+}
+
+.imgStyle {
+    height: 200px;
+    width: 100%;
+}
+
+.cursorStyle {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top:180px;
+    left: 0px;
+    right: 0px;
+}
