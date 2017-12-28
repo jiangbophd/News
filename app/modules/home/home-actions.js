@@ -8,3 +8,8 @@ export const getHomeNewsData = createAction(actionTypes.GET_HOME_NEWS);
 export const successGetHomeNewsData = createAction(actionTypes.SUCCESS_GET_HOME_NEWS);
 export const failedGetHomeNewsData = createAction(actionTypes.FAILED_GET_HOME_NEWS);
 
+
+export const loadMoreNewsData = createAction(actionTypes.LOAD_MORE_NEWS_DATA);
+export const successLoadMoreNewsData = createAction(actionTypes.SUCCESS_LOAD_MORE_NEWS_DATA);
+export const failedLoadMoreNewsData = createAction(actionTypes.FAILED_LOAD_MORE_NEWS_DATA);
+

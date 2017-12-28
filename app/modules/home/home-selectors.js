@@ -12,3 +12,9 @@ export const getPics = createSelector(
     return pics.slice(0, 4);
   }
 );
+
+
+export const getStartPosition = createSelector(
+	[state => state.home.getStartPosition],
+	(position) => position
+);

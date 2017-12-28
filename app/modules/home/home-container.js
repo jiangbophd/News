@@ -5,7 +5,8 @@ import { getPics } from './home-selectors';
 
 const mapStateToProps = state => ({
   newsData: state.home.getNewsData,
-  pics:getPics(state)
+  pics:getPics(state),
+  showLoadMoreSpinner: state.home.showLoadMoreSpinner
 });
 
 const mapDispatchToProps = {...actions};

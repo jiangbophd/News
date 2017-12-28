@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.carouselRoot{
+    position: relative;
+}
+
 .cursorStyle {
     text-align: center;
     font-size: 20px;

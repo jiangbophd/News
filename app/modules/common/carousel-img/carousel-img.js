@@ -23,7 +23,7 @@ class CarouselImg extends PureComponent {
 		
 		render() {
 				return (
-					<div>
+					<div className={styles.carouselRoot}>
 							<Carousel className={styles.carouselHeight} onPostChange={this.handleChange.bind(this)}
 							          index={this.state.carouselIndex} swipeable autoScroll overscrollable>
 									{

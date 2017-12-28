@@ -2,11 +2,16 @@
  * Created by Richard on 12/25/17.
  */
 import React, {Component} from 'react';
-
+import checkAppUpdate from '../../../utils/code-push';
 import { Page, Toolbar, ListItem, Icon, SearchInput } from 'react-onsenui';
+
 class Setting extends Component {
   constructor() {
     super();
+  }
+		
+  checkAppUpdate(content) {
+      checkAppUpdate();
   }
   
   render() {
@@ -49,7 +54,7 @@ class Setting extends Component {
           <div className='left'>
             <Icon icon="fa-cloud-download"></Icon>
           </div>
-          <div className='center'>
+          <div className='center' onClick={this.checkAppUpdate.bind(this)}>
             检查更新
           </div>
           <div className='right'>

@@ -43,6 +43,18 @@
         <preference name="CodePushDeploymentKey" value="1puVtFkzN8WqRwPBFKrPTtEhlOyFBkm5EqRGM" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <icon height="57" src="assets/ios/icon/icon.png" width="57" />
+        <icon height="114" src="assets/ios/icon/icon@2x.png" width="114" />
+        <icon height="60" src="assets/ios/icon/icon-60.png" width="60" />
+        <icon height="120" src="assets/ios/icon/icon-60@2x.png" width="120" />
+        <icon height="180" src="assets/ios/icon/icon-60@3x.png" width="180" />
+        <icon height="72" src="assets/ios/icon/icon-72.png" width="72" />
+        <icon height="144" src="assets/ios/icon/icon-72@2x.png" width="144" />
+        <icon height="76" src="assets/ios/icon/icon-76.png" width="76" />
+        <icon height="152" src="assets/ios/icon/icon-76@2x.png" width="152" />
+        <icon height="29" src="assets/ios/icon/icon-small.png" width="29" />
+        <icon height="58" src="assets/ios/icon/icon-small@2x.png" width="58" />
+        <icon height="87" src="assets/ios/icon/icon-small@3x.png" width="87" />
         <splash src="assets/ios/splash/Default@2x~iphone~anyany.png" />
         <splash src="assets/ios/splash/Default@2x~iphone~comany.png" />
         <splash src="assets/ios/splash/Default@2x~iphone~comcom.png" />

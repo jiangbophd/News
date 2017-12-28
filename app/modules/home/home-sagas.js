@@ -26,6 +26,7 @@ function* getNewsDataFlow() {
           item.content = formatImg(item.content);
           result.push(item);
         });
+        console.log('====', result.length);
         yield put(actions.successGetHomeNewsData(result));
       }else{
         yield put(actions.failedGetHomeNewsData([]));
@@ -36,9 +37,33 @@ function* getNewsDataFlow() {
   }
 }
 
+function* loadMoreNewsDataFlow() {
+		while(true){
+				try {
+						yield take(types.LOAD_MORE_NEWS_DATA);
+						let startPosition = yield select(getStartPosition);
+						console.log(startPosition);
+						const response = yield call(callApi, {
+								endpoint: 'jisuapi/get?channel=头条&num=' + COUNT_NUMBER + '&start=' + startPosition + '&appkey=80e542b23d128d1c2b7db6b0a11bfe13',
+								options: {
+										method: 'GET'
+								}});
+						if(response.code === '10000'){
+								console.log('#####', response.result.result.list.length);
+								yield put(actions.successLoadMoreNewsData(response.result.result.list));
+						}else{
+								yield put(actions.failedLoadMoreNewsData([]));
+						}
+				} catch (error) {
+						yield put(actions.failedLoadMoreNewsData([]));
+				}
+		}
+}
+
 
 
 
 export default [
-  fork(getNewsDataFlow)
+  fork(getNewsDataFlow),
+  fork(loadMoreNewsDataFlow)
 ];
