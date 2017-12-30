@@ -56,5 +56,5 @@
 
 # 视频讲解地址
 
-<a href="http://edu.csdn.net/course/detail/6540" target="blank">http://edu.csdn.net/course/detail/6540</a>
+<a href="http://edu.csdn.net/course/detail/6540" target="_blank">http://edu.csdn.net/course/detail/6540</a>
 
