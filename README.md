@@ -6,7 +6,7 @@
 <img src="readme/ios-show.gif">
 <img src="readme/android-show.gif">
 
-#安装
+# 安装
 
 1. 安装nodejs环境
 
@@ -14,12 +14,12 @@
 
 3. yarn
 
-#运行
+# 运行
 
 1. npm start
 
 
-##IOS真机测试
+## IOS真机测试
 
 2. npm run start:ios
 
@@ -27,7 +27,7 @@
 
 4. npm run build:ios
 
-##Android真机测试
+## Android真机测试
 
 1. npm run start:android
 
@@ -35,7 +35,7 @@
 
 3. npm run build:android
 
-#Codepush热更新
+# Codepush热更新
 
 1. npm install -g appcenter-cli
 
@@ -54,7 +54,7 @@
 
 6. appcenter codepush release -a richard.jiang-1tvl/NewsApp -c "./platforms/ios/www"  -t "*" -d "Production" -v "1.0"
 
-#视频讲解地址
+# 视频讲解地址
 
 <a href="http://edu.csdn.net/course/detail/6540" target="blank">http://edu.csdn.net/course/detail/6540</a>
 
