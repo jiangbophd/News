@@ -43,7 +43,7 @@
 
 3. appcenter profile list
 
-   appcenter app list
+   appcenter apps list
 
 4. appcenter codepush deployment add -a <ownerName>/<appName> Staging
    appcenter codepush deployment add -a <ownerName>/<appName> Production
@@ -52,7 +52,7 @@
 
 5. cd releases
 
-6. appcenter codepush release -a richard.jiang-1tvl/NewsApp -c "./platforms/ios/www"  -t "*" -d "Production" -v "1.0"
+6. appcenter codepush release -a richard.jiang-1tvl/NewsApp -c "./platforms/ios/www"  -t "*" -d "Production"
 
 # 视频讲解地址
 

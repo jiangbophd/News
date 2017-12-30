@@ -4,7 +4,7 @@
 
 import { notification } from 'react-onsenui';
 import ons from 'onsenui';
-export default function checkAppUpdate() {
+export default function checkAppUpdate(callBack) {
   "use strict";
   const onError = (error) => {
     console.log("An error occurred. " + error);
@@ -18,7 +18,12 @@ export default function checkAppUpdate() {
   const onPackageDownloaded = (localPackage) => {
     // Install regular updates after someone navigates away from the app for more than 2 minutes
     // Install mandatory updates after someone restarts the app
-    localPackage.install(onInstallSuccess, onError, { installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 120, mandatoryInstallMode: InstallMode.IMMEDIATE });
+    localPackage.install(onInstallSuccess, onError, { installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 120, mandatoryInstallMode: InstallMode.ON_NEXT_RESTART });
+  };
+  
+  const onProgress = (downloadProgress) => {
+		  callBack(Math.round((downloadProgress.receivedBytes / downloadProgress.totalBytes) * 100));
+		  console.log("Downloading " + (downloadProgress.receivedBytes / downloadProgress.totalBytes) * 100  + "%");
   };
   
   const onUpdateCheck = (remotePackage) =>{
@@ -32,7 +37,7 @@ export default function checkAppUpdate() {
         console.log("A CodePush update is available. Package hash: " + remotePackage.packageHash);
         ons.notification.confirm('有新版本' + remotePackage.appVersion + '是否要更新?').then((event)=>{
           if(event === 1){
-            remotePackage.download(onPackageDownloaded, onError);
+            remotePackage.download(onPackageDownloaded, onError, onProgress);
           }else{
       
           }
@@ -45,5 +50,5 @@ export default function checkAppUpdate() {
  
   window.codePush.checkForUpdate(onUpdateCheck, onError);
   
-  window.codePush.notifyApplicationReady();
+  //window.codePush.notifyApplicationReady();
 }

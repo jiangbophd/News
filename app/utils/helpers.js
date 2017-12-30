@@ -6,3 +6,17 @@ export const formatImg = (html) => {
   });
   return newContent;
 };
+
+export const getAppVersion = (callBack) => {
+  if(runningCordova) {
+		  cordova.getAppVersion.getVersionNumber().then(function (version) {
+				  callBack(version);
+		  }, function () {
+				  callBack(0);
+		  });
+  }
+};
+
+
+
+

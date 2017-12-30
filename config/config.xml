@@ -90,6 +90,7 @@
     <plugin name="cordova-plugin-file" spec="~4.3.0" />
     <plugin name="cordova-plugin-file-transfer" spec="~1.6.0" />
     <plugin name="cordova-plugin-code-push"></plugin>
+    <plugin name="cordova-plugin-app-version" />
 
 
 </widget>

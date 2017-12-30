@@ -3,15 +3,27 @@
  */
 import React, {Component} from 'react';
 import checkAppUpdate from '../../../utils/code-push';
+import { getAppVersion } from '../../../utils/helpers';
 import { Page, Toolbar, ListItem, Icon, SearchInput } from 'react-onsenui';
 
 class Setting extends Component {
   constructor() {
     super();
+    this.state = {progress: 0, appVersion: 0 };
+  }
+  
+  resetDownloadProgress(progress) {
+    this.setState({progress: progress})
+  }
+  
+  componentDidMount(){
+		  getAppVersion((version) => {
+		    this.setState({appVersion: version});
+      });
   }
 		
   checkAppUpdate(content) {
-      checkAppUpdate();
+      checkAppUpdate(this.resetDownloadProgress.bind(this));
   }
   
   render() {
@@ -22,7 +34,7 @@ class Setting extends Component {
             <Icon icon="info-circle"></Icon>
           </div>
           <div className='center'>
-            当前版本
+            当前版本{this.state.appVersion === 0 ? null : '( ' + this.state.appVersion + ' )' }
           </div>
           <div className='right'>
             <Icon icon="fa-angle-right"/>
@@ -55,7 +67,7 @@ class Setting extends Component {
             <Icon icon="fa-cloud-download"></Icon>
           </div>
           <div className='center' onClick={this.checkAppUpdate.bind(this)}>
-            检查更新
+            检查更新{this.state.progress === 0 || this.state.progress === 100 ? null : '(' + this.state.progress + '%)'}
           </div>
           <div className='right'>
             <Icon icon="fa-angle-right"/>
