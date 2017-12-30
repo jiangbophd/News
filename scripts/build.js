@@ -10,7 +10,7 @@ const paths = require('../webpack/paths');
 let p = Promise.resolve();
 if (!update) {
 		logger.info(`Cleaning the releases directory`);
-		p = runCommand(`rimraf releases`);
+		p = runCommand(`rimraf releases/platforms/${platform}`);
 }
 p
 	.then(() => {

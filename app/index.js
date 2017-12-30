@@ -9,6 +9,7 @@ import 'onsenui';
 import React from 'react';
 import { render } from 'react-dom';
 import { runningCordova } from './utils/helpers';
+import ons from 'onsenui';
 
 import { Provider } from 'react-redux';
 import configureStore from './store/configure-store';
@@ -16,6 +17,11 @@ import configureStore from './store/configure-store';
 import App from './modules/app/app-container';
 
 const bootstrap = () => {
+		if (ons.platform.isIPhoneX()) { // Utility function
+				// Add empty attribute to the <html> element
+				document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+				document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+		}
 		let store = configureStore();
 		render(
 			<Provider store={store}>
@@ -25,7 +31,7 @@ const bootstrap = () => {
 };
 
 if(runningCordova){
-	document.addEventListener('deviceready', bootstrap, false);
+		document.addEventListener('deviceready', bootstrap, false);
 } else {
 		bootstrap();
 }
