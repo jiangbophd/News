@@ -54,3 +54,7 @@
 
 6. appcenter codepush release -a richard.jiang-1tvl/NewsApp -c "./platforms/ios/www"  -t "*" -d "Production" -v "1.0"
 
+#视频讲解地址
+
+<a href="http://edu.csdn.net/course/detail/6540" target="blank">http://edu.csdn.net/course/detail/6540</a>
+
