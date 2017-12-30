@@ -1,5 +1,39 @@
-# News
-基于Cordova+React+Redux+OnsenUI的新闻热搜App实战开发
+# 前言
+本工程主要用于大家学习Cordova + React + Onsenui + Redux如何制作混合应用App, 大家可以自行下载安装，此工程为GPL协议，仅供学习用途，禁止用于任何商业用途。
+
+# IOS + Android效果展示
+
+<img src="readme/ios-show.gif">
+<img src="readme/android-show.gif">
+
+#安装
+
+1. 安装nodejs环境
+
+2. npm install -g yarn
+
+3. yarn
+
+#运行
+
+1. npm start
+
+
+##IOS真机测试
+
+2. npm run start:ios
+
+3. npm run start:ios:update
+
+4. npm run build:ios
+
+##Android真机测试
+
+1. npm run start:android
+
+2. npm run start:android:update
+
+3. npm run build:android
 
 #Codepush热更新
 
